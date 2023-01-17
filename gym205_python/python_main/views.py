@@ -52,7 +52,6 @@ def main_index(request):
             result_id = ''
             for x in result_list:
                 for item in x:
-                    print(item)
                     result_id = item
 
 

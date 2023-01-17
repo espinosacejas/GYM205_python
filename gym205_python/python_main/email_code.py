@@ -9,8 +9,8 @@ def email_check(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
-            mail = send_mail(form.cleaned_data['subject'], form.cleaned_data['email'], 'erapyth@gmail.com',
-                             ['moonanamiss@gmail.com'], fail_silently=False)
+            mail = send_mail(form.cleaned_data['subject'], form.cleaned_data['email'], form.cleaned_data['email'],
+                             ['eratest1221@gmail.com'], fail_silently=False)
             if mail:
                 messages.success(request, 'Сообщение успешно отправлено')
                 return redirect('index')
