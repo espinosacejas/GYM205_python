@@ -1,8 +1,12 @@
+from django.core.exceptions import PermissionDenied
+from django.http import Http404
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import *
 from django.core.mail import send_mail
 from django.contrib import messages
 from .forms import LoginForm, UserRegistrationForm
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import user_passes_test
 
 from .email_code import email_check
 from django.core.mail import send_mail
@@ -11,6 +15,11 @@ import random
 
 import mysql.connector
 from time import sleep
+from django.shortcuts import render, redirect
+from django.contrib.auth.models import User, auth
+
+
+
 
 
 con = mysql.connector.connect(user='alex',
@@ -29,7 +38,7 @@ def generate_code():
 
 
 
-def main_index(request):
+def start_index(request):
     # Форма регистрации пользователя
     if request.method == 'POST':
         user_form = UserRegistrationForm(request.POST)
@@ -77,9 +86,56 @@ def main_index(request):
 
 
 
-            return render(request, 'python_main/main_index.html', {'new_user': new_user})
+            return render(request, 'python_main/start_index.html', {'new_user': new_user})
     else:
         user_form = UserRegistrationForm()
 
-    return render(request, 'python_main/main_index.html', {'user_form': user_form})
+    return render(request, 'python_main/start_index.html', {'user_form': user_form})
 
+
+# Блок страницы с регистрацией пользователя
+def login_user(request):
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+
+        user = auth.authenticate(username=username, password=password)
+
+        if user is not None:
+            auth.login(request, user)
+            return redirect('start_index')
+        else:
+            messages.info(request, 'Invalid Username or Password')
+            return redirect('login_user')
+    else:
+        return render(request, 'python_main/registration/login_index.html')
+
+
+
+
+
+###########______Блок основной части сайта______###########
+
+## Создаем декоратор @group_required, чтобы проверять входят ли пользователи в дозволенную группу ##
+# дальше мы можем просто в скобках декоратора давать группы для проверки
+def check_user_able_to_see_page(*groups):
+
+    def decorator(function):
+        def wrapper(request, *args, **kwargs):
+            if request.user.groups.filter(name__in=groups).exists():
+                return function(request, *args, **kwargs)
+            else:
+                not_registr = 'Вы не можете посетить сайт, без регистрации!'
+                return render(request, 'python_main/start_index.html', {'not_registr': not_registr})
+
+        return wrapper
+
+    return decorator
+
+# ссылки обучения https://pythonist.ru/top-6-dekoratorov-v-django/
+# https://pythonist.ru/top-6-dekoratorov-v-django/
+
+
+@check_user_able_to_see_page('students')
+def main_index(request):
+    return render(request, 'python_main/main_index.html')
