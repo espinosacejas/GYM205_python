@@ -4,64 +4,15 @@
     <list default="true" id="0aa5a4bc-1d87-4970-8e42-b4cad67f6ad2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gym205_python/gym205_python/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/gym205_python/gym205_python/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gym205_python/python_main/templates/python_main/main_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/gym205_python/python_main/templates/python_main/start_index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gym205_python/python_main/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/gym205_python/python_main/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gym205_python/python_main/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/gym205_python/python_main/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gym205_python/python_main/static/main_page/images/bg_0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gym205_python/python_main/static/main_page/images/bg_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gym205_python/python_main/templates/python_main/main_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/gym205_python/python_main/templates/python_main/main_index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gym205_python/python_main/templates/python_main/registration/login_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/gym205_python/python_main/templates/python_main/registration/login_index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gym205_python/python_main/templates/python_main/start_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/gym205_python/python_main/templates/python_main/start_index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gym205_python/python_main/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/gym205_python/python_main/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gym205_python/python_main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/gym205_python/python_main/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/README.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/main_page/assets/css/fontawesome-all.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/main_page/assets/css/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/main_page/assets/css/noscript.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/main_page/assets/js/breakpoints.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/main_page/assets/js/browser.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/main_page/assets/js/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/main_page/assets/js/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/main_page/assets/js/util.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/main_page/assets/sass/base/_page.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/main_page/assets/sass/base/_reset.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/main_page/assets/sass/base/_typography.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/main_page/assets/sass/components/_actions.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/main_page/assets/sass/components/_box.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/main_page/assets/sass/components/_button.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/main_page/assets/sass/components/_form.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/main_page/assets/sass/components/_icon.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/main_page/assets/sass/components/_icons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/main_page/assets/sass/components/_image.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/main_page/assets/sass/components/_list.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/main_page/assets/sass/components/_table.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/main_page/assets/sass/layout/_bg.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/main_page/assets/sass/layout/_footer.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/main_page/assets/sass/layout/_header.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/main_page/assets/sass/layout/_main.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/main_page/assets/sass/layout/_wrapper.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/main_page/assets/sass/libs/_breakpoints.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/main_page/assets/sass/libs/_functions.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/main_page/assets/sass/libs/_mixins.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/main_page/assets/sass/libs/_vars.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/main_page/assets/sass/libs/_vendor.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/main_page/assets/sass/main.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/main_page/assets/sass/noscript.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/main_page/assets/webfonts/fa-brands-400.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/main_page/assets/webfonts/fa-brands-400.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/main_page/assets/webfonts/fa-brands-400.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/main_page/assets/webfonts/fa-brands-400.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/main_page/assets/webfonts/fa-brands-400.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/main_page/assets/webfonts/fa-regular-400.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/main_page/assets/webfonts/fa-regular-400.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/main_page/assets/webfonts/fa-regular-400.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/main_page/assets/webfonts/fa-regular-400.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/main_page/assets/webfonts/fa-regular-400.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/main_page/assets/webfonts/fa-solid-900.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/main_page/assets/webfonts/fa-solid-900.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/main_page/assets/webfonts/fa-solid-900.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/main_page/assets/webfonts/fa-solid-900.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/main_page/assets/webfonts/fa-solid-900.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/main_page/images/bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/main_page/images/overlay.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/main_page/images/pic01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/main_page/images/pic02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates_options/html5up-dimension/main_page/images/pic03.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +42,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SHOP/САЙТ магазин" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Gym205_kafedra" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
