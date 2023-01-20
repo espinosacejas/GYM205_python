@@ -27,7 +27,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'python_main',
-    'account_cabinets'
+    'accounts_cabinet'
 ]
 
 MIDDLEWARE = [
@@ -80,6 +80,7 @@ DATABASES = {
 EMAIL_HOST = 'smtp.gmail.com'
 # EMAIL_HOST_USER = os.getenv('user_mail')
 # EMAIL_HOST_PASSWORD = os.getenv('mail')
+
 
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
