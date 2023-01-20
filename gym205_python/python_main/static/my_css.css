@@ -5,3 +5,11 @@
 color: transparent;
 
 }
+
+
+/* Выделение ошибок желтым цветом */
+.errorlist {
+
+color: yellow;
+
+}

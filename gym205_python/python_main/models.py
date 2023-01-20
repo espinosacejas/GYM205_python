@@ -30,3 +30,21 @@ class teacher_code_model(models.Model):
     class Meta:
         verbose_name = 'Учительский код для регистрации'
         verbose_name_plural = 'Учительский код для регистрации'
+
+
+
+class contact_teacher_start_page(models.Model):
+    id = models.AutoField(primary_key=True, unique=True)
+    email_contact_start = models.CharField('почта, для контакта', null=False, max_length=200)
+    text_contact_start = models.TextField('текст обращения', null=False)
+    date = models.DateTimeField(auto_now=True)
+
+
+    def __str__(self):
+        return self.email_contact_start
+
+    class Meta:
+        verbose_name = 'Обращения с страницы регистрации'
+        verbose_name_plural = 'Обращения с страницы регистрации'
+
+

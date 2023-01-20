@@ -23,8 +23,8 @@
 						<div class="content">
 							<div class="inner">
 								<h1>ГБОУ гимназия № 205</h1>
-								<p>Образовательная платформа для изучения <a href="https://html5up.net">Python</a><br />
-								учениками <a href="https://html5up.net/license">гимназии.</a></p>
+								<p>Образовательная платформа для изучения <a href="#">IT технологий</a><br />
+								учениками <a href="#">гимназии.</a></p>
 
 								{% for message in messages %}
 								<div class="alert alert-danger" role="alert">
@@ -84,8 +84,8 @@
 								<h2 class="major">Регистрация</h2>
 								<span class="image main"><img src="static/main_page/images/pic01.jpg" alt="" /></span>
 								<form action="." method="post">
-									  {{ user_form.as_p }}
-									  {% csrf_token %}
+									{% csrf_token %}
+									{{ user_form.as_p }}
           						<p><input type="submit" class="button button-header" value="Создать аккаунт"></p>
       							</form>
 
@@ -104,34 +104,65 @@
 
 						<!-- About -->
 							<article id="about">
-								<h2 class="major">About</h2>
+								<h2 class="major">О проекте</h2>
 								<span class="image main"><img src="static/main_page/images/pic03.jpg" alt="" /></span>
-								<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
+								<p>Образовательный проект создан разработчиками:
+									<br>- Espinosa Cejas Francisco & Espinosa Rozov Alexander. <br>
+									- Дата старта проекта: Январь 2023 г. <br><br>
+								Направлен на изучение IT технологий. Подготовку учащихся к успешной сдаче ОГЭ и ЕГЭ
+								по информатике.</p>
 							</article>
 
 						<!-- Contact -->
 							<article id="contact">
 								<h2 class="major">Контакты</h2>
-								<form method="post" action="#">
+
+
+								 <form action="contact_start" method="post" class="form-horizontal">
+									{% csrf_token%}
 									<div class="fields">
 										<div class="field half">
-											<label for="name">Имя</label>
-											<input type="text" name="name" id="name" />
+											<label>Руководители проекта:</label>
+											1. Espinosa Ceja Francisco <br>
+											2. Espinosa Rozov Alexander
 										</div>
 										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Сообщение</label>
-											<textarea name="message" id="message" rows="4"></textarea>
+											<label>EMAIL</label>
+											1. espinosa.f@yandex.ru <br>
+											2. erapyth@gmail.com
 										</div>
 									</div>
+
+									<div class="form-group">
+										<label for="contact_mail2">Ваша почта</label>
+										<input type="text" class="form-control" name="contact_mail" id="contact_mail2" placeholder="Введите почту">
+									</div>
+
+									 <p></p>
+
+									 <div class="field">
+										 <label for="contact_message2">Сообщение</label>
+										 <textarea name="contact_message" id="contact_message2" rows="4"></textarea>
+									 </div>
+
+									<p></p>
+
 									<ul class="actions">
-										<li><input type="submit" value="Отправить сообщение" class="primary" /></li>
-										<li><input type="reset" value="Сбросить" /></li>
+										<li><input type="submit" value="Отправить сообщение" class="primary"></li>
+										<li><input type="reset" value="Сбросить"></li>
 									</ul>
+
+									<div class="form-group">
+										{% for message in messages %}
+										<div class="alert alert-danger" role="alert">
+											{{message}}
+										</div>
+										{% endfor %}
+									</div>
 								</form>
+
+
+
 								<ul class="icons">
 									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>

@@ -11,6 +11,8 @@ from django.contrib.auth.decorators import user_passes_test
 
 from .email_code import email_check
 from django.core.mail import send_mail
+from datetime import date
+from pathlib import Path
 
 import random
 
@@ -98,16 +100,42 @@ def start_index(request):
                                  [f'{email_search}'], fail_silently=False)
 
 
-
+                messages.success(request, 'Аккаунт создан, проверьте почту для завершения регистрации')
                 return render(request, 'python_main/start_index.html', {'new_user': new_user})
+
         except:
-            messages.error(request, 'Вы ввели некорректные данные')
+            messages.error(request, 'Вы ввели некорректные данные. Почта уже используется')
             return render(request, 'python_main/start_index.html')
 
     else:
         user_form = UserRegistrationForm()
 
     return render(request, 'python_main/start_index.html', {'user_form': user_form})
+
+
+
+###########______Контакт с разработчиками с главной страницы______###########
+def contact_start(request):
+    if request.method == 'POST':
+        contact_email = request.POST['contact_mail']
+        contact_message = request.POST['contact_message']
+
+        time_date = date.today()
+
+        if '@' in contact_email:
+            insert_data_code = """
+                INSERT INTO python_main_contact_teacher_start_page (email_contact_start, text_contact_start, date)
+                VALUES ( %s, %s, %s ) """
+            data_records = [f'{contact_email}', f'{contact_message}', f'{time_date}']
+            with con.cursor() as cursor:
+                cursor.execute(insert_data_code, data_records)
+                con.commit()
+            messages.success(request, 'Обращение к администраторам сайта отправлено')
+        else:
+            messages.error(request, 'Ошибка, сообщение не отправлено, проверьте данные')
+    return render(request, 'python_main/start_index.html')
+
+
 
 
 # Блок страницы с регистрацией пользователя
@@ -178,8 +206,21 @@ def verification_ind(request):
                     cursor.execute(insert_data_code, data_records)
                     con.commit()
 
+                query = ("SELECT username FROM auth_user WHERE id=%s")
+                mycursor.execute(query, (result_id_user,))
+                result_list = mycursor.fetchall()
+                result_username = ''
+                for x in result_list:
+                    for item in x:
+                        result_username = item
+
+                #создаем папку под студента
+                Path(f"account_cabinet/files_students/{result_username}").mkdir(parents=True, exist_ok=True)
+                # создаем папку под студента
+
                 messages.success(request, 'Верификация успешно пройдена. Теперь Вы можете залогиниться и зайти на сайт')
                 return render(request, 'python_main/start_index.html')
+
             messages.error(request, 'Данные не подтверждены')
             return render(request, 'python_main/registration/verification_index.html')
         except:
@@ -187,8 +228,6 @@ def verification_ind(request):
             return render(request, 'python_main/registration/verification_index.html')
     else:
         return render(request, 'python_main/registration/verification_index.html')
-
-
 
 
 
@@ -217,4 +256,18 @@ def check_user_able_to_see_page(*groups):
 
 @check_user_able_to_see_page('students')
 def main_index(request):
-    return render(request, 'python_main/main_index.html')
+    today = date.today()
+    date_now = today.strftime("%B %d, %Y")
+    user_id = request.user.id
+
+    query = ("SELECT email FROM auth_user WHERE id=%s")
+    mycursor.execute(query, (user_id,))
+    result_list = mycursor.fetchall()
+    result_email = ''
+    for x in result_list:
+        for item in x:
+            result_email = item
+
+    if result_email == '':
+        result_email = 'почта не указана'
+    return render(request, 'python_main/main_index.html', {'date_now': date_now, 'result_email': result_email})
