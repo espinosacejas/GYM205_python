@@ -9,7 +9,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-s$ejc5ls(b2m4*%7!9yp9wxq^sgnwa46=e@ux2qw9wdaugdktv'
+SECRET_KEY = os.getenv('keys')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -66,12 +66,7 @@ WSGI_APPLICATION = 'gym205_python.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'gym205_python_base',
-        'USER': 'alex',
-        'PASSWORD': 'nazca007',
-        'HOST': 'localhost',
-        'PORT': '',
+
     }
 }
 
@@ -80,6 +75,7 @@ DATABASES = {
 EMAIL_HOST = 'smtp.gmail.com'
 # EMAIL_HOST_USER = os.getenv('user_mail')
 # EMAIL_HOST_PASSWORD = os.getenv('mail')
+
 
 
 EMAIL_PORT = 587
